@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Ardalis.Result" Version="10.1.0"/>
+		<PackageReference Include="Mediator.Abstractions" Version="3.0.2"/>
+		<PackageReference Include="Scrutor" Version="7.0.0"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MyApp.Common.Core\MyApp.Common.Core.csproj"/>
+		<ProjectReference Include="..\MyApp.Contracts\MyApp.Contracts.csproj"/>
+	</ItemGroup>
+
+</Project>

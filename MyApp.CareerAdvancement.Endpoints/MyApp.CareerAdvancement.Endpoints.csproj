@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--
+      FrameworkReference (not PackageReference) gives access to
+      Microsoft.AspNetCore.Http, Routing, Builder, etc.
+    -->
+		<FrameworkReference Include="Microsoft.AspNetCore.App"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MyApp.Common.Core\MyApp.Common.Core.csproj"/>
+		<ProjectReference Include="..\MyApp.Common.Infrastructure\MyApp.Common.Infrastructure.csproj"/>
+		<ProjectReference Include="..\MyApp.Endpoints.Abstractions\MyApp.Endpoints.Abstractions.csproj"/>
+		<ProjectReference Include="..\MyApp.CareerAdvancement.Application\MyApp.CareerAdvancement.Application.csproj"/>
+		<ProjectReference Include="..\MyApp.CareerAdvancement.Core\MyApp.CareerAdvancement.Core.csproj"/>
+		<ProjectReference Include="..\MyApp.CareerAdvancement.Infrastructure\MyApp.CareerAdvancement.Infrastructure.csproj"/>
+	</ItemGroup>
+
+</Project>

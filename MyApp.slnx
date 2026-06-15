@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Module/" />
+  <Folder Name="/Module/CareerAdvancement/">
+    <Project Path="MyApp.CareerAdvancement.Application/MyApp.CareerAdvancement.Application.csproj" />
+    <Project Path="MyApp.CareerAdvancement.Core/MyApp.CareerAdvancement.Core.csproj" />
+    <Project Path="MyApp.CareerAdvancement.Endpoints/MyApp.CareerAdvancement.Endpoints.csproj" />
+    <Project Path="MyApp.CareerAdvancement.Infrastructure/MyApp.CareerAdvancement.Infrastructure.csproj" />
+  </Folder>
+  <Project Path="MyApp.Api/MyApp.Api.csproj" Id="028ebb9f-786c-47c3-b778-9c136c6885b8" />
+  <Project Path="MyApp.Common.Core/MyApp.Common.Core.csproj" />
+  <Project Path="MyApp.Common.Infrastructure/MyApp.Common.Infrastructure.csproj" />
+  <Project Path="MyApp.Contracts/MyApp.Contracts.csproj" />
+  <Project Path="MyApp.Endpoints.Abstractions/MyApp.Endpoints.Abstractions.csproj" />
+</Solution>
