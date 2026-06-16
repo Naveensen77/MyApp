@@ -16,7 +16,7 @@ builder.Services.AddOpenApi();
 
 // Register all module APIs (adds IApiEndpoint impls + DbContexts + validators)
 builder.Services.AddCareerApis();
-builder.Services.AddCareerServices(builder.Configuration.GetConnectionString("Default") ?? "Server=(localdb)\\mssqllocaldb;Database=MyAppDb;Trusted_Connection=True;");
+builder.Services.AddCareerServices(builder.Configuration.GetConnectionString("Default") ?? "Data Source=localhost;Initial Catalog=MyAppDb;Integrated Security=True;Encrypt=False");
 
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
