@@ -7,16 +7,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ardalis.Result" Version="10.1.0"/>
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8"/>
-		<PackageReference Include="Scalar.AspNetCore" Version="2.14.11"/>
+		<PackageReference Include="Ardalis.Result" Version="10.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+		<PackageReference Include="Scalar.AspNetCore" Version="2.14.11" />
 
 		<!--
       Mediator: TWO packages required.
       Abstractions  → goes in all projects (via Common.Core transitively)
       SourceGenerator → ONLY here in the Api host. PrivateAssets=all prevents it leaking.
     -->
-		<PackageReference Include="Mediator.Abstractions" Version="3.0.2"/>
+		<PackageReference Include="Mediator.Abstractions" Version="3.0.2" />
 		<PackageReference Include="Mediator.SourceGenerator" Version="3.0.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,17 +29,23 @@
 		</PackageReference>
 
 		<!-- OpenIddict: token validation (remove if not using auth) -->
-		<PackageReference Include="OpenIddict.AspNetCore" Version="7.5.0"/>
-		<PackageReference Include="OpenIddict.EntityFrameworkCore" Version="7.5.0"/>
-		<PackageReference Include="OpenIddict.Validation.SystemNetHttp" Version="7.5.0"/>
+		<PackageReference Include="OpenIddict.AspNetCore" Version="7.5.0" />
+		<PackageReference Include="OpenIddict.EntityFrameworkCore" Version="7.5.0" />
+		<PackageReference Include="OpenIddict.Validation.SystemNetHttp" Version="7.5.0" />
+		<PackageReference Include="Serilog" Version="4.3.1" />
+
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="9.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+
 	</ItemGroup>
 
 	<ItemGroup>
 		<!-- Api references ONLY Endpoint projects — never Application/Core/Infrastructure directly -->
-		<ProjectReference Include="..\MyApp.Contracts\MyApp.Contracts.csproj"/>
-		<ProjectReference Include="..\MyApp.Common.Core\MyApp.Common.Core.csproj"/>
-		<ProjectReference Include="..\MyApp.Endpoints.Abstractions\MyApp.Endpoints.Abstractions.csproj"/>
-		<ProjectReference Include="..\MyApp.CareerAdvancement.Endpoints\MyApp.CareerAdvancement.Endpoints.csproj"/>
+		<ProjectReference Include="..\MyApp.Contracts\MyApp.Contracts.csproj" />
+		<ProjectReference Include="..\MyApp.Common.Core\MyApp.Common.Core.csproj" />
+		<ProjectReference Include="..\MyApp.Endpoints.Abstractions\MyApp.Endpoints.Abstractions.csproj" />
+		<ProjectReference Include="..\MyApp.CareerAdvancement.Endpoints\MyApp.CareerAdvancement.Endpoints.csproj" />
 		<!-- Add more module Endpoints here as you create new modules -->
 	</ItemGroup>
 
